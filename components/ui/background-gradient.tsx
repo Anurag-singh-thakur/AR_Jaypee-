@@ -1,6 +1,5 @@
 "use client";
 import { cn } from "@/utils/cn";
-import { useEffect, useRef, useState } from "react";
 
 export const BackgroundGradient = ({
   children,
@@ -13,7 +12,6 @@ export const BackgroundGradient = ({
   containerClassName?: string;
   animate?: boolean;
 }) => {
-  const containerRef = useRef<HTMLDivElement>(null);
 
   return (
     <div
