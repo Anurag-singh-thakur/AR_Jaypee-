@@ -1,7 +1,7 @@
 # AR-JUET
 
 ## Overview
-My Website is a modern web application built with Next.js, featuring a responsive design, dynamic routing, and a rich user interface. The application leverages React components, Framer Motion for animations, and a custom color palette for an enhanced user experience.
+My Website is a modern web application built with Next.js and TypeScript, featuring a responsive design, dynamic routing, and a rich user interface. The application leverages React components, Framer Motion for animations, and a custom color palette for an enhanced user experience.
 
 ## Table of Contents
 - [AR-JUET](#ar-juet)
@@ -20,8 +20,7 @@ To get started with My Website, follow these steps:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/Anurag-singh-thakur/AR-JUET.git
-   cd my-website
+   git clone https://github.com/Anurag-singh-thakur/AR_Jaypee-.git
    ```
 
 2. **Install dependencies:**
@@ -30,10 +29,8 @@ To get started with My Website, follow these steps:
    npm install
    ```
 
-3. **Set up environment variables:**
-   Create a `.env.local` file in the root directory and add your environment variables. You can refer to `.env.example` for the required variables.
 
-4. **Run the development server:**
+3. **Run the development server:**
    ```bash
    npm run dev
    ```
