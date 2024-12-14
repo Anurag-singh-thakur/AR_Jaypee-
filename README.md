@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AR-JUET
 
-## Getting Started
+## Overview
+My Website is a modern web application built with Next.js, featuring a responsive design, dynamic routing, and a rich user interface. The application leverages React components, Framer Motion for animations, and a custom color palette for an enhanced user experience.
 
-First, run the development server:
+## Table of Contents
+- [AR-JUET](#ar-juet)
+  - [Overview](#overview)
+  - [Table of Contents](#table-of-contents)
+  - [Installation](#installation)
+  - [Usage](#usage)
+    - [Running the Application](#running-the-application)
+    - [Building for Production](#building-for-production)
+  - [Features](#features)
+  - [Folder Structure](#folder-structure)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Installation
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To get started with My Website, follow these steps:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Anurag-singh-thakur/AR-JUET.git
+   cd my-website
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Install dependencies:**
+   Make sure you have [Node.js](https://nodejs.org/) installed. Then run:
+   ```bash
+   npm install
+   ```
 
-## Learn More
+3. **Set up environment variables:**
+   Create a `.env.local` file in the root directory and add your environment variables. You can refer to `.env.example` for the required variables.
 
-To learn more about Next.js, take a look at the following resources:
+4. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+   Open your browser and navigate to `http://localhost:3000` to see your application in action.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Usage
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Running the Application
+- To start the development server, use:
+  ```bash
+  npm run dev
+  ```
 
-## Deploy on Vercel
+### Building for Production
+- To create an optimized production build, run:
+  ```bash
+  npm run build
+  ```
+- To start the production server, use:
+  ```bash
+  npm start
+  ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Features
+- **Responsive Design**: The application is fully responsive and works on various screen sizes.
+- **Dynamic Routing**: Utilizes Next.js's file-based routing system for easy navigation.
+- **Animations**: Incorporates Framer Motion for smooth animations and transitions.
+- **Custom Color Palette**: A well-defined color scheme enhances the visual appeal.
+- **SEO Optimized**: Built with SEO best practices in mind, including meta tags and structured data.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Folder Structure
+The project follows a standard Next.js folder structure:
