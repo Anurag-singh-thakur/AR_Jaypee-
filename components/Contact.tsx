@@ -69,7 +69,7 @@ const Contact = () => {
       </div>
 
       <div className="grid lg:grid-cols-2 gap-12">
-        <div className="space-y-8">
+        <div className="space-y-8 mt-20">
           {/* Contact Info */}
           {[
             {
@@ -109,45 +109,6 @@ const Contact = () => {
               </motion.a>
             </BackgroundGradient>
           ))}
-<BackgroundGradient className="rounded-xl p-6 bg-black mt-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-            >
-              <h3 className="text-2xl font-bold text-white mb-4">Services We Offer</h3>
-              <div className="space-y-4">
-                {[
-                  {
-                    title: "3D Property Models",
-                    description: "High-quality, detailed virtual replicas of properties."
-                  },
-                  {
-                    title: "Virtual Reality Tours",
-                    description: "Immersive experiences that allow clients to walk through properties from anywhere."
-                  },
-                  {
-                    title: "Custom VR Solutions",
-                    description: "Tailored packages for real estate professionals to meet specific needs."
-                  },
-                  {
-                    title: "Interactive Click-Through Models",
-                    description: "Engage buyers with user-friendly, interactive features."
-                  }
-                ].map((service, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    className="border-l-2 border-blue-500 pl-4"
-                  >
-                    <h4 className="text-white font-semibold mb-1">{service.title}</h4>
-                    <p className="text-gray-400 text-sm">{service.description}</p>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </BackgroundGradient>
         </div>
 
         {/* Contact Form */}
