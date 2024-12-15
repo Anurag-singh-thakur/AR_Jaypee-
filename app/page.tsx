@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import {  useRef } from 'react';
 import { motion, useScroll } from 'framer-motion';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
