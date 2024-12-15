@@ -13,13 +13,6 @@ const About = () => {
   const teamDescription =
     "We are a passionate team of ambitious, curious, and hardworking students with over 3 years of experience in cutting-edge technology. For the past 2 months, we have been dedicated to refining this innovative idea. Driven by commitment, we specialize in delivering high-quality, production-ready solutions tailored to our clients' needs, ensuring timely execution and exceptional results.";
 
-  const teamMembers = [
-    { name: "Eklavya", image: "/images/p1.jpg", linkedin: "https://linkedin.com/in/johndoe", role: "Founder & CEO" },
-    { name: "Anchit Dixit", image: "/images/p2.jpg", linkedin: "https://linkedin.com/in/janesmith", role: "CTO" },
-    { name: "Utkarsh Upadhyay", image: "/images/p3.jpeg", linkedin: "https://linkedin.com/in/alicebrown", role: "Lead Developer" },
-    { name: "Bob Johnson", image: "/images/p1.jpg", linkedin: "https://linkedin.com/in/bobjohnson", role: "Marketing Manager" },
-  ];
-
   return (
     <div className="flex flex-col overflow-hidden bg-gray-900 text-gray-100">
       <div className="flex flex-col items-center">
