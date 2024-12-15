@@ -27,7 +27,7 @@ const Hero: React.FC<HeroProps> = ({ onBookDemoClick }) => {
         <video
         ref={videoRef}
         className="absolute inset-0 w-full h-full object-cover"
-        src="/video/v.mp4"
+        src="/video/Orientation.mp4"
         onEnded={handleVideoEnd}
         onLoadedData={() => {
           if (videoRef.current) {
