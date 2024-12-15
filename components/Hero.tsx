@@ -1,12 +1,9 @@
 'use client';
-import { useEffect, useRef } from 'react';
+import {  useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
-import { useScrollAnimation } from '../hooks/useScrollAnimation';
-import image1 from './../public/Images/image-1.png.jpg'
 const Hero = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const scrollY = useScrollAnimation();
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end start"]
