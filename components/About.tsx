@@ -34,9 +34,9 @@ const About = () => {
                     particleColor="#FFFFFF"
                   />
                 </div>
-                <p className="text-lg md:text-xl text-gray-100">
+                <div className="text-lg md:text-xl text-gray-100">
                   <TextGenerateEffect  words={missionText} />
-                </p>
+                </div>
               </motion.div>
             </div>
 

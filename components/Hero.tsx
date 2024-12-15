@@ -1,5 +1,5 @@
 'use client';
-import { useRef } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 type HeroProps = {
@@ -8,21 +8,40 @@ type HeroProps = {
 
 const Hero: React.FC<HeroProps> = ({ onBookDemoClick }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+  
+
+  const handleVideoEnd = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  };
 
   return (
-    <section className="relative min-h-screen flex items-center py-20 overflow-hidden">
-      {/* Video Background */}
-      <video
+    <div className="relative min-h-screen flex items-center py-20 overflow-hidden">
+      {isClient && (
+        <video
         ref={videoRef}
-        className="absolute inset-0 w-full h-full object-cover z-[-1]"
+        className="absolute inset-0 w-full h-full object-cover"
         src="/video/v.mp4"
-        autoPlay
-        loop
-        muted
-        playsInline
+        onEnded={handleVideoEnd}
+        onLoadedData={() => {
+          if (videoRef.current) {
+            videoRef.current.muted = true;
+            videoRef.current.loop = true;
+            videoRef.current.autoplay = true;
+            videoRef.current.play();
+          }
+        }}
+        style={{ zIndex: -1 }}
       />
+      )}
 
-      {/* Overlay Effects */}
+      {/* Gradient Overlays */}
       <div className="absolute inset-0 bg-gradient-to-b from-gray-900/60 via-gray-900/50 to-gray-900/80">
         <div className="absolute inset-0 bg-grid-white/5 bg-grid animate-grid-fade" />
         <motion.div
@@ -52,7 +71,7 @@ const Hero: React.FC<HeroProps> = ({ onBookDemoClick }) => {
         />
       </div>
 
-      {/* Content */}
+      {/* Main Content */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left">
@@ -63,12 +82,13 @@ const Hero: React.FC<HeroProps> = ({ onBookDemoClick }) => {
                   The VR Estate
                 </span>
               </h1>
-              <p className="text-gray-400 text-lg mb-8">
+              <div className="text-gray-400 text-lg mb-8">
                 Reimagine property presentations with advanced VR solutions. We specialize in creating
                 stunning, interactive 3D property experiences that set you apart in the competitive real estate market.
-              </p>
+              </div>
             </div>
 
+            {/* Features Section */}
             <div className="space-y-4 mb-8">
               {[
                 'Boost buyer interest with immersive tours',
@@ -96,6 +116,7 @@ const Hero: React.FC<HeroProps> = ({ onBookDemoClick }) => {
               ))}
             </div>
 
+            {/* Call-to-Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <button
                 className="px-8 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium
@@ -114,7 +135,7 @@ const Hero: React.FC<HeroProps> = ({ onBookDemoClick }) => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
