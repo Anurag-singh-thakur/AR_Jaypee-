@@ -1,31 +1,36 @@
 'use client';
-import {  useRef } from 'react';
+
+import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
-const Hero = () => {
+
+type HeroProps = {
+  onBookDemoClick: () => void;
+};
+
+const Hero: React.FC<HeroProps> = ({ onBookDemoClick }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start start", "end start"]
+    offset: ['start start', 'end start'],
   });
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   const placeholderImages = {
-    main: "/Images/image-1.png.jpg",
-    floating: "/Images/image02.jpg"
+    main: '/Images/image-1.png.jpg',
+    floating: '/Images/image02.jpg',
   };
 
   return (
-    <motion.section 
+    <motion.section
       ref={containerRef}
       className="relative min-h-screen flex items-center py-20 overflow-hidden"
       style={{ opacity }}
     >
       <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-900/95 to-gray-900">
         <div className="absolute inset-0 bg-grid-white/5 bg-grid animate-grid-fade" />
-        
-        <motion.div 
+        <motion.div
           className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/30 rounded-full filter blur-3xl opacity-20"
           animate={{
             x: [0, 50, 0],
@@ -34,10 +39,10 @@ const Hero = () => {
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: 'easeInOut',
           }}
         />
-        <motion.div 
+        <motion.div
           className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/30 rounded-full filter blur-3xl opacity-20"
           animate={{
             x: [0, -50, 0],
@@ -46,8 +51,8 @@ const Hero = () => {
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1
+            ease: 'easeInOut',
+            delay: 1,
           }}
         />
       </div>
@@ -57,7 +62,7 @@ const Hero = () => {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
             style={{ y }}
             className="text-center lg:text-left"
           >
@@ -67,14 +72,14 @@ const Hero = () => {
               transition={{ delay: 0.2 }}
               className="relative z-10"
             >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
                 Welcome to
                 <span className="block bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
                   The VR Estate
                 </span>
               </h1>
               <p className="text-gray-400 text-lg mb-8">
-                Reimagine property presentations with advanced VR solutions. We specialize in creating 
+                Reimagine property presentations with advanced VR solutions. We specialize in creating
                 stunning, interactive 3D property experiences that set you apart in the competitive real estate market.
               </p>
             </motion.div>
@@ -88,7 +93,7 @@ const Hero = () => {
               {[
                 'Boost buyer interest with immersive tours',
                 'Simplify remote property viewings',
-                'Leverage innovative visuals to drive results'
+                'Leverage innovative visuals to drive results',
               ].map((feature, index) => (
                 <motion.div
                   key={feature}
@@ -98,8 +103,18 @@ const Hero = () => {
                   className="flex items-center space-x-3"
                 >
                   <div className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center">
-                    <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    <svg
+                      className="w-4 h-4 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
                     </svg>
                   </div>
                   <span className="text-gray-300">{feature}</span>
@@ -124,6 +139,7 @@ const Hero = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={onBookDemoClick}
                 className="px-8 py-3 rounded-lg border border-gray-600 text-gray-300 hover:bg-gray-800/50
                          transform hover:shadow-lg transition-all duration-200"
               >
@@ -140,7 +156,6 @@ const Hero = () => {
             className="relative"
           >
             <div className="relative h-[500px] w-full rounded-2xl overflow-hidden">
-              {/* Placeholder Image */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20" />
               <Image
                 src={placeholderImages.main}
@@ -148,10 +163,8 @@ const Hero = () => {
                 fill
                 className="object-cover mix-blend-overlay"
                 priority
-                sizes= "(max-width : 768px )  (max-width: 1200px) 50vw, 33vw"
-
-                              />
-
+                sizes="(max-width: 768px) 80vw, (max-width: 1200px) 50vw, 33vw"
+              />
               <motion.div
                 animate={{
                   y: [0, -20, 0],
@@ -160,7 +173,7 @@ const Hero = () => {
                 transition={{
                   duration: 4,
                   repeat: Infinity,
-                  repeatType: "reverse"
+                  repeatType: 'reverse',
                 }}
                 className="absolute -top-4 -right-4 w-24 h-24 bg-blue-500/10 rounded-xl backdrop-blur-xl
                          border border-blue-500/20 flex items-center justify-center"
@@ -175,8 +188,8 @@ const Hero = () => {
                 transition={{
                   duration: 4,
                   repeat: Infinity,
-                  repeatType: "reverse",
-                  delay: 1
+                  repeatType: 'reverse',
+                  delay: 1,
                 }}
                 className="absolute -bottom-4 -left-4 w-24 h-24 bg-purple-500/10 rounded-xl backdrop-blur-xl
                          border border-purple-500/20 flex items-center justify-center"
@@ -201,7 +214,7 @@ const Hero = () => {
           transition={{
             duration: 1.5,
             repeat: Infinity,
-            repeatType: "reverse"
+            repeatType: 'reverse',
           }}
           className="w-6 h-10 rounded-full border-2 border-gray-500 flex items-start justify-center p-2"
         >
@@ -212,7 +225,7 @@ const Hero = () => {
             transition={{
               duration: 1.5,
               repeat: Infinity,
-              repeatType: "reverse"
+              repeatType: 'reverse',
             }}
             className="w-1.5 h-1.5 rounded-full bg-gray-500"
           />

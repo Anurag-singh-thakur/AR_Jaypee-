@@ -95,10 +95,6 @@ html {
 @tailwind components;
 @tailwind utilities;
 
-/* Hide default cursor */
-* {
-  cursor: none !important;
-}
 
 /* Hover effect for interactive elements */
 .hover-effect {
@@ -127,12 +123,5 @@ html {
   @apply bg-gradient-to-b from-blue-500 to-purple-500 rounded-full;
 }
 
-/* Disable custom cursor on touch devices */
-@media (hover: none) {
-  * {
-    cursor: auto !important;
-  }
-  .custom-cursor {
-    display: none !important;
-  }
-}
+
+
