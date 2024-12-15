@@ -13,7 +13,6 @@ import BookDemo from '../components/BookDemo';
 import Blog from '@/components/Blog';
 
 export default function Home() {
-  const [showBookDemo, setShowBookDemo] = useState(false);  
   const containerRef = useRef<HTMLDivElement>(null);
   const bookDemoRef = useRef<HTMLDivElement>(null);  
   const { scrollYProgress } = useScroll({
@@ -22,7 +21,6 @@ export default function Home() {
   });
 
   const handleBookDemoClick = () => {
-    setShowBookDemo(true);
     setTimeout(() => {
       bookDemoRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, 0);
@@ -82,11 +80,9 @@ export default function Home() {
         <section id="contact" className="py-20">
           <Contact />
         </section>
-        {showBookDemo && (
-          <section id="book-demo" className="py-20" ref={bookDemoRef}>
-            <BookDemo />
-          </section>
-        )}
+        <section id="book-demo" className="py-20" ref={bookDemoRef}>
+          <BookDemo />
+        </section>
       </div>
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-purple-500 transform origin-left z-50"
