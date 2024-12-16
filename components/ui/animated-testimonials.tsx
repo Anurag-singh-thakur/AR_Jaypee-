@@ -5,7 +5,7 @@ import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-
+import { useMediaQuery } from 'react-responsive';
 type Testimonial = {
   quote: string;
   name: string;
@@ -44,7 +44,7 @@ export const AnimatedTestimonials = ({
   const randomRotateY = () => {
     return Math.floor(Math.random() * 21) - 10;
   };
-
+  const isMobile = useMediaQuery({ maxWidth: 767 });
   return (
     <div className="max-w-sm md:max-w-4xl mx-auto antialiased font-sans px-4 md:px-8 lg:px-12 py-20">
       <div className="relative grid grid-cols-1 md:grid-cols-2 gap-20">
@@ -122,30 +122,27 @@ export const AnimatedTestimonials = ({
               {testimonials[active].designation}
             </p>
             <motion.p className="text-lg tracking-tighter font-Roboto text-gray-500 mt-8 dark:text-neutral-300">
-              {testimonials[active]?.quote &&
-                testimonials[active].quote.split("").map((word, index) => (
-                  <motion.span
-                    key={index}
-                    initial={{
-                      filter: "blur(10px)",
-                      opacity: 0,
-                      y: 5,
-                    }}
-                    animate={{
-                      filter: "blur(0px)",
-                      opacity: 1,
-                      y: 0,
-                    }}
-                    transition={{
-                      duration: 0.2,
-                      ease: "easeInOut",
-                      delay: 0.02 * index,
-                    }}
-                    className="inline-block"
-                  >
-                    {word}&nbsp;
-                  </motion.span>
-                ))}
+              {testimonials[active]?.quote && (
+                <motion.span
+                  initial={{
+                    filter: "blur(10px)",
+                    opacity: 0,
+                    y: 5,
+                  }}
+                  animate={{
+                    filter: "blur(0px)",
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  transition={{
+                    duration: 0.5,  
+                    ease: "easeInOut",
+                  }}
+                  className="inline-block"
+                >
+                  {testimonials[active].quote}
+                </motion.span>
+              )}
             </motion.p>
           </motion.div>
           <div className="flex gap-4 pt-12 md:pt-0">
