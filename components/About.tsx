@@ -64,28 +64,28 @@ const About = () => {
                       "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
                     name: "Archit Dixit",
                     designation: "Founder and CEO",
-                    src: "/images/p2.jpg", // Ensure this path is correct
+                    src: "https://drive.google.com/uc?id=1CJ9yXavxT9h6HPN7iiflzpnKiPOwtQ6C", // Ensure this path is correct
                   },
                   {
                     quote:
                       "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
                     name: "Utkarsh Upadhyay",
                     designation: "Chief Technical Officer",
-                    src: "/images/p3.jpeg", // Ensure this path is correct
+                    src: "https://drive.google.com/uc?id=1IGdNI6VU-UOVP74Y9OPXuoPWqjr99qtx", // Ensure this path is correct
                   },
                   {
                     quote:
                       "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
                     name: "Eklavya Gautam",
                     designation: "CREATIVE DIRECTOR- 3D MODELLING",
-                    src: "/images/p1.jpg", // Ensure this path is correct
+                    src: "https://drive.google.com/uc?id=1eMxX3riG1b7ivyCg3D-Mg9pPRtLFLYPL", // Ensure this path is correct
                   },
                   {
                     quote:
                       "Outstanding support and robust features. It's rare to find a product that delivers on all its promises.",
                     name: "Utkarsh Mishra",
                     designation: "CFO",
-                    src: "/images/image02.jpg", // Ensure this path is correct
+                    src: "https://drive.google.com/uc?id=1A3usBaSBBQ5ZByuuoHZmosrVRpimcpc9", // Ensure this path is correct
                   },
                 ]}
               />
