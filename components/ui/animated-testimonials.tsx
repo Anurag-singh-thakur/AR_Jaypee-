@@ -5,7 +5,6 @@ import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { useMediaQuery } from 'react-responsive';
 type Testimonial = {
   quote: string;
   name: string;
@@ -44,7 +43,6 @@ export const AnimatedTestimonials = ({
   const randomRotateY = () => {
     return Math.floor(Math.random() * 21) - 10;
   };
-  const isMobile = useMediaQuery({ maxWidth: 767 });
   return (
     <div className="max-w-sm md:max-w-4xl mx-auto antialiased font-sans px-4 md:px-8 lg:px-12 py-20">
       <div className="relative grid grid-cols-1 md:grid-cols-2 gap-20">
