@@ -8,6 +8,27 @@ body {
 }
 
 
+.tracing-gradient {
+  background: linear-gradient(135deg, #ff0099, #4932f3, #ff0099);
+  background-size: 300% 300%;
+  animation: tracing-move 6s ease-in-out infinite;
+}
+
+@keyframes tracing-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.team-desc{
+  margin-top: 160px;
+  margin-left: 80px;
+}
 a {
   color: var(--link-color);
 } 

@@ -42,7 +42,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="h-24" />
+      <div className="h-0" />
       
       <motion.header
         initial={{ y: -100 }}

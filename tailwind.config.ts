@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      zIndex: {
+        '-1': '-1',
+      },
       colors: {
         dark: '#121212',
         'dark-lighter': '#1E1E1E',
