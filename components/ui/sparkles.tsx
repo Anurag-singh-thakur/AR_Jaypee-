@@ -50,10 +50,10 @@ export const SparklesCore = ({
             opacity: [0.2, 0.8, 0.2],
           }}
           transition={{
-            duration: Math.random() * 2 + 1,
+            duration: 1, // Fixed duration for consistency
             repeat: Infinity,
             ease: "easeInOut",
-            delay: Math.random() * 2,
+            delay: Math.random() * 2, // Random delay for animation
           }}
         />
       ))}
