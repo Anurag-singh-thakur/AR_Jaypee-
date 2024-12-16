@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { SparklesCore } from "./ui/sparkles";
 import { BackgroundGradient } from "./ui/background-gradient";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
-import { AnimatedTestimonials } from './ui/animated-testimonials'; // Ensure this import is correct
+import { AnimatedTestimonials } from './ui/animated-testimonials'; 
 
 const About = () => {
   const missionText =
@@ -64,28 +64,28 @@ const About = () => {
                       "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
                     name: "Archit Dixit",
                     designation: "Founder and CEO",
-                    src: "https://drive.google.com/uc?id=1CJ9yXavxT9h6HPN7iiflzpnKiPOwtQ6C", // Ensure this path is correct
+                    src: "https://drive.google.com/uc?id=1CJ9yXavxT9h6HPN7iiflzpnKiPOwtQ6C", 
                   },
                   {
                     quote:
                       "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
                     name: "Utkarsh Upadhyay",
                     designation: "Chief Technical Officer",
-                    src: "https://drive.google.com/uc?id=1IGdNI6VU-UOVP74Y9OPXuoPWqjr99qtx", // Ensure this path is correct
+                    src: "https://drive.google.com/uc?id=1IGdNI6VU-UOVP74Y9OPXuoPWqjr99qtx",
                   },
                   {
                     quote:
                       "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
                     name: "Eklavya Gautam",
                     designation: "CREATIVE DIRECTOR- 3D MODELLING",
-                    src: "https://drive.google.com/uc?id=1eMxX3riG1b7ivyCg3D-Mg9pPRtLFLYPL", // Ensure this path is correct
+                    src: "https://drive.google.com/uc?id=1eMxX3riG1b7ivyCg3D-Mg9pPRtLFLYPL", 
                   },
                   {
                     quote:
                       "Outstanding support and robust features. It's rare to find a product that delivers on all its promises.",
                     name: "Utkarsh Mishra",
                     designation: "CFO",
-                    src: "https://drive.google.com/uc?id=1A3usBaSBBQ5ZByuuoHZmosrVRpimcpc9", // Ensure this path is correct
+                    src: "https://drive.google.com/uc?export=download&id=1qaJvqxRtHbIvDjXtzjWis4zQsa4Y__gv", 
                   },
                 ]}
               />

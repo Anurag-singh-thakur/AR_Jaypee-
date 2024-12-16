@@ -14,6 +14,11 @@ module.exports = {
         dark: '#121212',
         'dark-lighter': '#1E1E1E',
       },
+      fontFamily: {
+        sans: ['Roboto', 'sans-serif'],
+        serif: ['Playfair Display', 'serif'],
+        mono: ['Courier New', 'monospace'],
+      },
     },
   },
   plugins: [],

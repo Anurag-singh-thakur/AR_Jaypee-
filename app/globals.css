@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
 body {
   background-color: var(--background-color);
   color: var(--text-color);
@@ -27,7 +29,7 @@ body {
 }
 .team-desc{
   margin-top: 160px;
-  margin-left: 80px;
+  margin-left: 50px;
 }
 a {
   color: var(--link-color);
